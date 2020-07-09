@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font: 14pt sans-serif;
+}
+
+span{
+	margin-left: 30px !important;
+}
+
+.linhaUm, .linhaDois, .linhaTres{
+	text-transform: uppercase;
+}
+
+.main {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#clone{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ .linhaUm{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 40px;
+	border: 1px solid #333;
+	text-align: center;
+}
+ .linhaUm p:first-child{
+	border-right: 1px solid #333;
+}
+ .linhaDois{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 40px;
+	border: 1px solid #333;
+}
+ .linhaDois p{
+	margin-left: 4px;
+}
+ .linhaDois p:nth-child(-n+3){
+	border-right: 1px solid #333;
+}
+ .linhaTres{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 4px;
+	border: 1px solid #333;
+}
+ .linhaTres p{
+	text-align: center;
+	font-size: 16pt;
+	font-weight: bold;
+}
+ .linhaTres p:nth-child(-n+3){
+	border-right: 1px solid #333;
+}
+ .areaNotas{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #333;
+}
+
+ .areaNotas h3, span{
+	font-weight: bold;
+	margin: 5px;
+}
+.areaNotas p{
+	margin: 10px 10px 10px 25px;
+} input{
+	margin: 10px 10px 10px 25px;
+}
+
+ .rodape{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #333;
+	font-size: 14pt;
+	padding: 2px;
+}
+ .rodape p{
+	margin-left: 4px;
+}
+ .rodape p:first-child{
+	border-right: 1px solid #333;
+}
+
+/* TIRAR ALGUNS ELEMENTOS NA HORA DE IMPRIMIR */
+@media print {
+  input, button {
+    display: none !important;
+  }
+}
+
+/* DESATIVAR DECORAÇÃO DO TYPE NUMBER: AS DUAS SETINHAS */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Protocolos</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="data(), nome()">
+	<div class="main" id="main">
+		<div class="linhaUm">
+			<p>ESTORIL DISTR. VEÍCULOS</p>
+			<p>PROTOCOLO DE DOCUMENTOS</p>
+		</div>
+		<div class="container" id="container">
+			<div class="linhaDois">
+				<p>DE</p>
+				<p>DEPARTAMENTO</p>
+				<p>PARA</p>
+				<p>DEPARTAMENTO</p>
+			</div>
+			<div class="linhaTres">
+				<p id="nome"></p>
+				<p id="depart"></p>
+				<p>Priscila</p>
+				<p>Fiscal</p>
+			</div>
+			<div class="areaNotas" id="areaNotas">
+				<h3>Segue anexo as seguintes notas fiscais:</h3>	
+				<input id="numeroNota" type="number" placeholder="Número da Nota">
+				<input id="text" type="text" placeholder="">
+				<button onclick="add()">+</button>
+				<br>
+			</div>
+			<div class="rodape">
+				<p id="data"></p>
+				<p>Assinatura:</p>
+			</div>
+		</div>
+		<div class="clone" id="clone">
+			<button onclick="clone()">Gerar</button>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="script.js"></script>
+
+
+</body>
+</html>

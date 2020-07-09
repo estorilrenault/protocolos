@@ -1,0 +1,41 @@
+function add(){
+  var row = document.getElementById('text').value;
+  var pai = document.getElementById('areaNotas');
+  var texto = document.createElement('p');
+
+  var row2 = document.getElementById('numeroNota').value;
+  var pai2 = document.getElementById('areaNotas');
+  var texto2 = document.createElement('span');
+
+  pai2.appendChild(texto2).innerHTML += "NF "+row2+" - " + row;
+  var row2 = document.getElementById('numeroNota').value="";
+
+}
+
+function clone(){
+	var div = document.getElementById('container'),
+    clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
+	clone.id = "clone";
+document.body.appendChild(clone);
+window.print();
+}
+
+function nome() {
+  var txt;
+  var nome = prompt("Digite seu nome:");
+  txt =  nome;
+  document.getElementById("nome").innerHTML = txt;
+
+  var txt2;
+  var depart = prompt("Digite o departamento:");
+  txt2 = depart;
+  document.getElementById("depart").innerHTML = txt2;
+}
+
+function data(){
+	monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho","Julho", "Agosto", "Outubro", "Novembro", "Dezembro");
+	now = new Date;
+
+	date = ("Santos, " + now.getDate () + " de " + monName [now.getMonth() ] + " de " + now.getFullYear () + ".");
+	document.getElementById("data").innerHTML = date;
+}
