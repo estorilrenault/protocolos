@@ -1,15 +1,29 @@
+
 function add(){
-  var row = document.getElementById('text').value;
-  var pai = document.getElementById('areaNotas');
-  var texto = document.createElement('p');
+	var texto = document.getElementById('text').value;
+	var nota  = document.getElementById('numeroNota').value;
+	var depart= document.getElementById('default').value;
 
-  var row2 = document.getElementById('numeroNota').value;
-  var pai2 = document.getElementById('areaNotas');
-  var texto2 = document.createElement('span');
 
-  pai2.appendChild(texto2).innerHTML += "NF "+row2+" - " + row;
-  var row2 = document.getElementById('numeroNota').value="";
+	if(texto == ''||nota == ''||depart==''){
+		alert("Por favor, preencha os campos corretamente.")
+	}else{
+		var html = '';
 
+	html += '<div id="textoNotas">';
+		html += '<p id="nota">'+nota+'</p>';
+		html += '<p id="emitente">'+texto+'</p>';
+		html += '<i class="fas fa-trash-alt" id="icon" onclick="del()"></i>'
+	html += '</div>';
+
+	document.getElementById('areaNotas').innerHTML += html;
+	}
+	
+}
+
+function del(){
+
+	document.getElementById('textoNotas').remove();
 }
 
 function clone(){
@@ -25,11 +39,11 @@ function nome() {
   var nome = prompt("Digite seu nome:");
   txt =  nome;
   document.getElementById("nome").innerHTML = txt;
-
+/*
   var txt2;
   var depart = prompt("Digite o departamento:");
   txt2 = depart;
-  document.getElementById("depart").innerHTML = txt2;
+  document.getElementById("depart").innerHTML = txt2;*/
 }
 
 function data(){

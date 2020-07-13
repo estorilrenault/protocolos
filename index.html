@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<title>Protocolos</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
-<body onload="data(), nome()">
+<body onload="data()">
 	<div class="main" id="main">
 		<div class="linhaUm">
 			<p>ESTORIL DISTR. VEÍCULOS</p>
@@ -20,15 +21,29 @@
 			</div>
 			<div class="linhaTres">
 				<p id="nome"></p>
-				<p id="depart"></p>
+				<select required class="depart">
+					<option id="default" value="" disabled selected>Departamento</option>
+					<option value="adm">ADMINISTRATIVO</option>
+				  	<option value="finan">FINANCEIRO</option>
+				  	<option value="ti">T.I</option>
+				  	<option value="crm">CRM/SAC</option>
+				  	<option value="novos">NOVOS</option>
+				  	<option value="semi">SEMI-NOVOS</option>
+				  	<option value="vd">VENDAS DIRETAS</option>
+				  	<option value="ofc">OFICINA</option>
+				  	<option value="pca">PEÇAS</option>
+				</select>
 				<p>Priscila</p>
 				<p>Fiscal</p>
 			</div>
 			<div class="areaNotas" id="areaNotas">
-				<h3>Segue anexo as seguintes notas fiscais:</h3>	
-				<input id="numeroNota" type="number" placeholder="Número da Nota">
-				<input id="text" type="text" placeholder="">
-				<button onclick="add()">+</button>
+				<h3>Segue anexo as seguintes notas fiscais:</h3>
+				<div class="input">	
+					<input id="numeroNota" type="number" placeholder="Nº da Nota">
+					<input id="text" type="text" placeholder="Emitente">
+					<!--<button onclick="add()">+</button>-->
+					<i class="fas fa-plus-circle" onclick="add()"></i>
+				</div>
 				<br>
 			</div>
 			<div class="rodape">
@@ -37,13 +52,11 @@
 			</div>
 		</div>
 		<div class="clone" id="clone">
-			<button onclick="clone()">Gerar</button>
+			<button onclick="clone()">Imprimir</button>
 		</div>
 	</div>
 
 
 	<script type="text/javascript" src="script.js"></script>
-
-
 </body>
 </html>
