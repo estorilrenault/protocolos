@@ -5,7 +5,7 @@ function add(){
 	var depart= document.getElementById('default').value;
 
 
-	if(texto == ''||nota == ''||depart==''){
+	if(texto == ''||nota == ''){
 		alert("Por favor, preencha os campos corretamente.")
 	}else{
 		var html = '';
